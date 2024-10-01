@@ -1,6 +1,8 @@
 <?php
 namespace Src\Repository;
 use Faker\Factory;
+use Src\Helper\SingletonTrait;
+use Src\Entity\Site;
 
 class SiteRepository implements Repository
 {

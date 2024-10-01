@@ -1,5 +1,14 @@
 <?php
 namespace Src;
+
+use Src\Entity\Template;
+use Src\Context\ApplicationContext;
+use Src\Repository\QuoteRepository;
+use Src\Repository\SiteRepository;
+use Src\Repository\DestinationRepository;
+use Src\Entity\Quote;
+use Src\Entity\User;
+
 class TemplateManager
 {
     public function getTemplateComputed(Template $tpl, array $data)

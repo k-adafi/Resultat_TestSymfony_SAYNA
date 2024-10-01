@@ -2,6 +2,10 @@
 
 namespace Src\Context;
 
+use Src\Helper\SingletonTrait;
+use Src\Entity\Site;
+use Src\Entity\User;
+
 class ApplicationContext
 {
     use SingletonTrait;

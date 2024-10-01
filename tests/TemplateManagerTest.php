@@ -2,6 +2,11 @@
 
 namespace Tests;
 use PHPUnit\Framework\TestCase;
+use Src\Repository\DestinationRepository;
+use Src\Context\ApplicationContext;
+use Src\Entity\Quote;
+use Src\Entity\Template;
+use Src\TemplateManager;
 
 require_once __DIR__ . '/../src/Entity/Destination.php';
 require_once __DIR__ . '/../src/Entity/Quote.php';

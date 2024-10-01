@@ -2,6 +2,8 @@
 
 namespace Src\Repository;
 use Faker\Factory;
+use Src\Helper\SingletonTrait;
+use Src\Entity\Destination;
 
 class DestinationRepository implements Repository
 {

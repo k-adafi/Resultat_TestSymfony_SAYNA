@@ -1,5 +1,10 @@
 <?php
 namespace Src\Repository;
+
+use Src\Helper\SingletonTrait;
+use Src\Entity\Quote;
+use DateTime;
+
 class QuoteRepository implements Repository
 {
     use SingletonTrait;
