@@ -1,5 +1,13 @@
 <?php
 
+namespace example;
+
+use Src\Entity\Template;
+use Src\TemplateManager;
+use Src\Entity\Quote;
+use Faker\Factory;
+
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
 require_once __DIR__ . '/../src/Entity/Destination.php';
@@ -15,7 +23,7 @@ require_once __DIR__ . '/../src/Repository/QuoteRepository.php';
 require_once __DIR__ . '/../src/Repository/SiteRepository.php';
 require_once __DIR__ . '/../src/TemplateManager.php';
 
-$faker = \Faker\Factory::create();
+$faker = Factory::create();
 
 $template = new Template(
     1,

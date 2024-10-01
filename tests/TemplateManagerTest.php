@@ -53,15 +53,9 @@ class TemplateManagerTest extends TestCase
         $template = new Template(
             1,
             'Your delivery to [quote:destination_name]',
-    "
-Hi [user:first_name],
-
-Thanks for contacting us to deliver to [quote:destination_name].
-
-Regards,
-
-SAYNA team
-");
+            "Hi [user:first_name], 
+                    Thanks for contacting us to deliver to [quote:destination_name].Regards, SAYNA team"
+                );
         $templateManager = new TemplateManager();
 
         $message = $templateManager->getTemplateComputed(
@@ -71,15 +65,19 @@ SAYNA team
             ]
         );
 
-        $this->assertEquals('Your delivery to ' . $expectedDestination->countryName, $message->subject);
-        $this->assertEquals("
-Hi " . $expectedUser->firstname . ",
+        $this->assertEquals(
+            'Your delivery to ' . $expectedDestination->countryName, 
+            $message->subject
+        );
+        
+        //Affichage utiliser pour les comparaisons
+        echo "Expected: " . "Hi " . $expectedUser->firstname . ", Thanks for contacting us to deliver to " . $expectedDestination->countryName . ". Regards, SAYNA team\n";
+        echo "Actual: " . $message->content . "\n";
 
-Thanks for contacting us to deliver to " . $expectedDestination->countryName . ".
-
-Regards,
-
-SAYNA team
-", $message->content);
+        $this->assertEquals(
+            "Hi ". $expectedUser->firstname .", 
+                    Thanks for contacting us to deliver to " . $expectedDestination->countryName . ".Regards, SAYNA team", 
+            $message->content
+        );
     }
 }

@@ -11,6 +11,13 @@ use Src\Entity\User;
 
 class TemplateManager
 {
+    /**
+     * Summary of getTemplateComputed
+     * @param \Src\Entity\Template $tpl
+     * @param array $data
+     * @throws \RuntimeException
+     * @return Template
+     */
     public function getTemplateComputed(Template $tpl, array $data)
     {
         if (!$tpl) {
@@ -24,6 +31,12 @@ class TemplateManager
         return $replaced;
     }
 
+    /**
+     * Summary of computeText
+     * @param mixed $text
+     * @param array $data
+     * @return array|string
+     */
     private function computeText($text, array $data)
     {
         $APPLICATION_CONTEXT = ApplicationContext::getInstance();
