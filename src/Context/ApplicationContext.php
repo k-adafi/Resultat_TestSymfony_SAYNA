@@ -1,5 +1,7 @@
 <?php
 
+namespace Src\Context;
+
 class ApplicationContext
 {
     use SingletonTrait;

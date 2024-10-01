@@ -1,5 +1,5 @@
 <?php
-
+namespace Src\Repository;
 class QuoteRepository implements Repository
 {
     use SingletonTrait;

@@ -1,5 +1,6 @@
 <?php
 
+namespace Src\Entity;
 class Quote
 {
     public $id;

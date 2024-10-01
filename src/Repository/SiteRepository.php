@@ -1,5 +1,5 @@
 <?php
-
+namespace Src\Repository;
 use Faker\Factory;
 
 class SiteRepository implements Repository

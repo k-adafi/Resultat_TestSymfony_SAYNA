@@ -1,5 +1,5 @@
 <?php
-
+namespace Src;
 class TemplateManager
 {
     public function getTemplateComputed(Template $tpl, array $data)

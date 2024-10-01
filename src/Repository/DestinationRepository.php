@@ -1,5 +1,6 @@
 <?php
 
+namespace Src\Repository;
 use Faker\Factory;
 
 class DestinationRepository implements Repository
