@@ -17,7 +17,7 @@ class SiteRepository implements Repository
      */
     public function getById($id)
     {
-        $generator = Faker\Factory::create();
+        $generator = Factory::create();
         $generator->seed($id);
 
         return new Site($id, $generator->url);
